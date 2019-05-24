@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import HelloWorld from '../components/HelloWorld'
 import my from '../components/my'
 import headNav from '../components/headNav'
+import detail from '../components/detail'
 
 console.log(my)
 
@@ -16,6 +17,11 @@ export default new Router({
       path: '/',
       name: 'h',
       component: HelloWorld
+    },
+    {
+      path: '/detail',
+      name: 'detail',
+      component: detail
     }
   ]
 })

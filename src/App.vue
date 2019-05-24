@@ -4,6 +4,8 @@
     <router-view />
     <my></my>
     <head-nav :title="title" :run="run" name="标题" :home="this"></head-nav>
+
+    <router-link :to="{name:'detail',  query:{id:'1'}}">带参数路由跳转</router-link>
   </div>
 </template>
 
