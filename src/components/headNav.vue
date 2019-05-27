@@ -2,6 +2,7 @@
   <div>
     {{title}}
     {{name}}
+    {{title}}
     <button  @click="run">点击呀</button>
     <button @click="getMsg">获取父组件传的信息</button>
   </div>
