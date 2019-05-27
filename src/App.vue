@@ -2,9 +2,11 @@
   <div id="app">
     <img src="./assets/logo.png">
     <router-view />
+    <br/>
     <my></my>
+    <br/>
     <head-nav :title="title" :run="run" name="标题" :home="this"></head-nav>
-
+    <br/>
     <router-link :to="{name:'detail',  query:{id:'1'}}">带参数路由跳转</router-link>
   </div>
 </template>
