@@ -4,6 +4,7 @@ import HelloWorld from '../components/HelloWorld'
 import my from '../components/my'
 import headNav from '../components/headNav'
 import detail from '../components/detail'
+import transition from '../components/transition'
 
 console.log(my)
 
@@ -22,6 +23,11 @@ export default new Router({
       path: '/detail',
       name: 'detail',
       component: detail
+    },
+    {
+     path: '/transition',
+     name: 'transition',
+     component: transition
     }
   ]
 })
