@@ -1,6 +1,7 @@
 <template>
   <div id="app">
-    <div v-show="indexflag">
+
+<!--    <div v-show="indexflag">
       <img src="./assets/logo.png">
       <br/>
       <my></my>
@@ -8,7 +9,7 @@
       <head-nav :title="title" :run="run" name="标题" :home="this"  title="静态的"></head-nav>
       <br/>
       <router-link :to="{name:'detail',  query:{id:'1'}}">带参数路由跳转</router-link>
-    </div>
+    </div>-->
     <!-- <button @click="btn">这里是跳转</button>
 
      <router-view />-->
@@ -25,6 +26,7 @@
          </div>
       </transition>
     </div>
+
 
 
   </div>
