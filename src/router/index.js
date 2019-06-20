@@ -6,7 +6,7 @@ import headNav from '../components/headNav'
 import detail from '../components/detail'
 import transition from '../components/transition'
 
-console.log(my)
+// console.log(my)
 
 Vue.use(Router)
 Vue.component('my',my)

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+    *{
+      padding: 0;
+      color:#222;
+      margin: 0;
+    }
+    .desc{
+      margin-top: 30px;
+      width: 200px;
+      height: 30px;
+      text-align:center;
+      border:1px solid #ddd;
+     /* transition: all 0.8s;*/
+    }
+    .desc.fade-enter{
+      opacity: 0;
+
+    }
+    .desc.fade-enter-active{
+      transition: all 2s;
+    }
+    /*.desc.fade-enter-to{*/
+      /*transition: all 0.8s;*/
+      /*opacity: 1;*/
+    /*}*/
+
+
+ /*   .desc.fade-leave-active{
+      opacity: 1;
+      transition: all 0.8s;
+    }*/
+   /* .desc.fade-leave-to{
+      transition: all 0.8s;
+      opacity: 0;
+    }*/
+  </style>
+</head>
+<body>
+<div id="app">
+  <button @click="showClick">点击显示</button>
+  <button @click="hideClick">点击消失</button>
+  <transition name="fade">
+    <div class='desc' v-if="flag">
+      我是描述内容
+    </div>
+  </transition>
+</div>
+
+<script src="vue.js"></script>
+<script>
+  new Vue({
+    el: '#app',
+    data: {
+      a:  '111',
+      flag: false
+    },
+    methods:{
+      showClick(){
+       this.$nextTick(()=>{
+         this.flag = true;
+       })
+      },
+      hideClick(){
+        this.flag=false;
+      }
+    }
+  });
+
+</script>
+</body>
+</html>
