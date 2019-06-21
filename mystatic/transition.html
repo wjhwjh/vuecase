@@ -13,31 +13,37 @@
       margin-top: 30px;
       width: 200px;
       height: 30px;
+      line-height: 30px;
       text-align:center;
       border:1px solid #ddd;
-     /* transition: all 0.8s;*/
+      transition: all 0.8s;
+      opacity: 1;
     }
     .desc.fade-enter{
       opacity: 0;
-
+      transform: translate3d(50px,0,0);
     }
     .desc.fade-enter-active{
       transition: all 2s;
     }
-    /*.desc.fade-enter-to{*/
-      /*transition: all 0.8s;*/
-      /*opacity: 1;*/
-    /*}*/
+    .desc.fade-enter-to{
+      transition: all 0.8s;
+      transform: translate3d(30px,0,0);
+    }
 
-
- /*   .desc.fade-leave-active{
+    .desc.fade-leave{
+      transition: all 0.8s;
       opacity: 1;
+      transform: translate3d(30px,0,0);
+    }
+    .desc.fade-leave-active{
       transition: all 0.8s;
-    }*/
-   /* .desc.fade-leave-to{
-      transition: all 0.8s;
+    }
+    .desc.fade-leave-to{
       opacity: 0;
-    }*/
+      transition: all 0.8s;
+      transform: translate3d(100px,0,0);
+    }
   </style>
 </head>
 <body>
@@ -56,7 +62,6 @@
   new Vue({
     el: '#app',
     data: {
-      a:  '111',
       flag: false
     },
     methods:{
