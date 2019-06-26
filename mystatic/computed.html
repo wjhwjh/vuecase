@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+    *{
+      padding: 0;
+      color:#222;
+      margin: 0;
+    }
+    .desc{
+      margin-top: 30px;
+      width: 200px;
+      height: 30px;
+      line-height: 30px;
+      text-align:center;
+      border:1px solid #ddd;
+      transition: all 0.8s;
+      opacity: 1;
+    }
+    .desc.fade-enter{
+      opacity: 0;
+      transform: translate3d(50px,0,0);
+    }
+    .desc.fade-enter-active{
+      transition: all 2s;
+    }
+    .desc.fade-enter-to{
+      transition: all 0.8s;
+      transform: translate3d(30px,0,0);
+    }
+
+    .desc.fade-leave{
+      transition: all 0.8s;
+      opacity: 1;
+      transform: translate3d(30px,0,0);
+    }
+    .desc.fade-leave-active{
+      transition: all 0.8s;
+    }
+    .desc.fade-leave-to{
+      opacity: 0;
+      transition: all 0.8s;
+      transform: translate3d(100px,0,0);
+    }
+  </style>
+</head>
+<body>
+<div id="app">
+  <button @click="showClick">点击增加</button>
+  <p>{{addCount}}</p>
+  <p>{{count}}</p>
+
+</div>
+
+<script src="vue.js"></script>
+<script>
+/*
+* 通过点击改变data里的数据，也能立即渲染到页面中；
+* 也可以通过computed返回改变后的数据。
+*
+* 说明一个问题，无论以何种方式改变数据，都会同步到页面中
+*
+* computed优点是数据改变了，依赖次数据的相应数据也会发生改变，并还能同步
+*
+*
+*
+*
+* */
+  new Vue({
+    el: '#app',
+    data: {
+      count:0
+    },
+    methods:{
+      showClick(){
+        this.count++
+      }
+    },
+    computed: {
+       addCount(){
+        return this.count
+       }
+    }
+  });
+
+</script>
+</body>
+</html>
