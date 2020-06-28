@@ -3,7 +3,7 @@ import Router from 'vue-router'
 import Home from '@/components/Home'
 import my from '@/components/my'
 import headNav from '@/components/headNav'
-import CartIndex from '@/components/CartShop/CartIndex'
+import CartHome from '@/components/CartShop/CartHome'
 import transition from '@/components/transition'
 import Ball from '@/components/Ball.vue'
 
@@ -25,9 +25,9 @@ export default new Router({
             component: Ball
         },
         {
-            path: '/cartIndex',
-            name: 'cartIndex',
-            component: CartIndex
+            path: '/cartHome',
+            name: 'cartHome',
+            component: CartHome
         },
         {
             path: '/transition',

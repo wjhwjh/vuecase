@@ -24,7 +24,7 @@ let routeArray = [
   },
   {
     title:'组件传值',
-    name:'cartIndex'
+    name:'cartHome'
   },
 ]
 
