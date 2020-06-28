@@ -5,7 +5,9 @@
          <router-link :to="{name:item.name}">{{item.title}}</router-link>
        </li>
      </ul>
-    <router-view></router-view>
+     <div class="view-wrap"> 
+       <router-view></router-view>
+     </div>
   </div>
 </template>
 
@@ -66,5 +68,8 @@ export default {
 }
 .tab li a:hover{
   color: #fe6804;
+}
+.view-wrap{
+  position: relative;
 }
 </style>
